@@ -1,0 +1,50 @@
+{
+  "neural networks": [
+    {
+      "source": "MockKB: Basics",
+      "snippet": "The main types of neural networks are Feedforward Neural Networks (FNNs), used for simple pattern recognition, Recurrent Neural Networks (RNNs), ideal for sequence data like text, and Convolutional Neural Networks (CNNs), the standard for image processing.",
+      "url": "mock://types/fnn_rnn_cnn"
+    },
+    {
+      "source": "MockKB: Deep Learning",
+      "snippet": "Other advanced architectures include Autoencoders for dimensionality reduction and Generative Adversarial Networks (GANs) for synthetic data generation.",
+      "url": "mock://types/gan_autoencoder"
+    }
+  ],
+  "transformer architectures": [
+    {
+      "source": "MockKB: Core Tech",
+      "snippet": "Transformer architectures are a sequence-to-sequence model built entirely on the self-attention mechanism, which allows for massive parallelization and faster training times compared to traditional recurrent models.",
+      "url": "mock://arch/attention"
+    },
+    {
+      "source": "MockKB: Efficiency",
+      "snippet": "A key computational trade-off is that Transformer architectures scale quadratically with sequence length, leading to high memory and computational demands for very long inputs.",
+      "url": "mock://arch/tradeoffs"
+    }
+  ],
+  "computational efficiency of transformer architectures": [
+    {
+      "source": "MockKB: Tradeoffs",
+      "snippet": "In terms of efficiency, parallel processing makes Transformers extremely fast during training, especially with access to multiple GPUs. However, the attention mechanism's quadratic complexity is the primary factor limiting the maximum sequence size they can handle in practice.",
+      "url": "mock://efficiency/summary"
+    },
+    {
+      "source": "MockKB: Comparison",
+      "snippet": "Compared to RNNs, a Transformer's total FLOPs might be higher, but the ability to execute calculations in parallel (instead of sequentially) means the *wall-clock time* for training is dramatically lower.",
+      "url": "mock://efficiency/comparison"
+    }
+  ],
+  "reinforcement learning": [
+    {
+      "source": "MockKB: Methodologies",
+      "snippet": "Recent papers frequently employ stable, on-policy algorithms like Proximal Policy Optimization (PPO) and off-policy algorithms like Soft Actor-Critic (SAC). PPO is often the robust go-to for baseline comparisons.",
+      "url": "mock://rl/ppo_sac"
+    },
+    {
+      "source": "MockKB: Challenges",
+      "snippet": "Common challenges in RL include sample inefficiency, which requires agents to interact with the environment millions of times, and the difficult 'credit assignment' problem when designing reward signals.",
+      "url": "mock://rl/challenges"
+    }
+  ]
+}
