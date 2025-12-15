@@ -1,0 +1,13 @@
+# Core Libraries
+pydantic
+python-dotenv
+requests
+loguru
+
+# LLM Integration
+groq
+
+# Vector Store (using FAISS)
+faiss-cpu
+numpy
+sentence-transformers
