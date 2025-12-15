@@ -1,0 +1,55 @@
+{
+    "2025-12-15T20:42:15.895598": {
+        "id": "2025-12-15T20:42:15.895598",
+        "timestamp": "2025-12-15T20:42:15.895607",
+        "memory_type": "Knowledge",
+        "agent_source": "Manager",
+        "topic": "Research transformer architectures, analyze their computational efficiency, and summarize key trade-offs.",
+        "confidence": 0.3903501710287355,
+        "source_refs": [
+            "MockKB: Core Tech (mock://arch/attention)",
+            "MockKB: Efficiency (mock://arch/tradeoffs)"
+        ],
+        "summary": "Transformer architectures balance computational efficiency and model capacity through trade-offs in attention mechanisms, layer count, embedding size, and feed-forward network size.",
+        "is_used": false
+    },
+    "2025-12-15T20:43:47.738775": {
+        "id": "2025-12-15T20:43:47.738775",
+        "timestamp": "2025-12-15T20:43:47.738791",
+        "memory_type": "Knowledge",
+        "agent_source": "Manager",
+        "topic": "Research transformer architectures, analyze their computational efficiency, and summarize key trade-offs.",
+        "confidence": 0.8,
+        "source_refs": [
+            "MockKB: Core Tech (mock://arch/attention)",
+            "MockKB: Efficiency (mock://arch/tradeoffs)"
+        ],
+        "summary": "**",
+        "is_used": false
+    },
+    "2025-12-15T20:43:53.226826": {
+        "id": "2025-12-15T20:43:53.226826",
+        "timestamp": "2025-12-15T20:43:53.226841",
+        "memory_type": "Knowledge",
+        "agent_source": "Manager",
+        "topic": "Compare two machine-learning approaches (CNN vs RNN) and recommend which is better for image classification.",
+        "confidence": 0.4759095351787845,
+        "source_refs": [],
+        "summary": "CNNs are generally better suited for image classification tasks than RNNs due to their ability to automatically learn spatial hierarchies of features and robustness to small transformations.",
+        "is_used": false
+    },
+    "2025-12-15T20:46:43.126686": {
+        "id": "2025-12-15T20:46:43.126686",
+        "timestamp": "2025-12-15T20:46:43.126698",
+        "memory_type": "Knowledge",
+        "agent_source": "Manager",
+        "topic": "What are Neural Networks",
+        "confidence": 0.95,
+        "source_refs": [
+            "MockKB: Basics (mock://types/fnn_rnn_cnn)",
+            "MockKB: Deep Learning (mock://types/gan_autoencoder)"
+        ],
+        "summary": "Neural networks are machine learning models inspired by the human brain, composed of layers of interconnected nodes that process and transmit information to recognize patterns and make predictions.",
+        "is_used": false
+    }
+}
