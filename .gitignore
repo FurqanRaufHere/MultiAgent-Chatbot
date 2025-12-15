@@ -1,0 +1,17 @@
+# Virtual Environment
+krr/
+
+# Python Caching
+__pycache__/
+*.pyc
+
+# API Keys & Local Config
+.env
+
+# Vector DB Files (e.g., Chroma/FAISS index files)
+chroma_db/
+*.faiss
+*.pkl
+
+# Project Logs and Outputs
+logs/
