@@ -5,13 +5,6 @@ A research-focused multi-agent chatbot that demonstrates a Knowledge Representat
 This README explains what the project does, how it works, how to run it, common troubleshooting steps, and how to extend it. It focuses on practical usage and architecture rather than a plain file listing.
 
 ---
-
-## Purpose & Motivation
-
-- Provide a small, modular multi-agent system that mimics how a team of specialized assistants cooperates to answer complex questions.
-- Showcase adaptive behavior: pre-checking and using long-term memory to avoid redundant work, planning workflows with an LLM, executing specialized subtasks, synthesizing final answers, and storing key findings for later retrieval.
-- Offer a developer-friendly codebase for experimentation with planning/synthesis LLMs, vector memory, and agent orchestration.
-
 ## Key Features
 
 - Agent orchestration via a `CoordinatorAgent` that plans workflows and routes tasks to specialized agents.
@@ -22,54 +15,6 @@ This README explains what the project does, how it works, how to run it, common 
 - LLM-based planning and synthesis through a pluggable connector (`utils/llm_connector.py`) with graceful fallback to rule-based planning.
 - FAISS vector store integration for semantic memory (embedding generation via SentenceTransformers).
 - CLI scripts to run automated scenario tests and an interactive runtime REPL chat.
-
-## Quick Start
-
-Prerequisites
-- Python 3.10+ (or the version configured in your venv)
-- A Python virtual environment is recommended (project includes `krr/Scripts` helpers on Windows)
-- Valid Groq API credentials (if you want LLM planning/synthesis behavior)
-
-Install dependencies (run inside your venv):
-
-```bash
-pip install -r requirements.txt
-```
-
-Environment variables
-- Create a `.env` file in the project root (not committed to VCS) containing at minimum:
-
-```
-GROQ_API_KEY=your_groq_api_key_here
-GROQ_MODEL=llama-3.3-70b-versatile  # optional override
-EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2  # optional
-```
-
-- If `GROQ_API_KEY` is missing, the code falls back to rule-based planning and other graceful degradations (LLM calls will be disabled).
-
-Validate the Groq API key (optional):
-
-```bash
-python scripts/check_groq_api_key.py --question "What is the capital of Pakistan?"
-```
-
-This script attempts a small Chat completion and prints the model's response.
-
-Run the pre-defined test scenarios
-
-```bash
-python main.py
-```
-
-- `main.py` executes a set of automated scenarios (simple query, complex query, memory tests, multi-step, collaborative). Results are saved to the `outputs/` directory.
-
-Start an interactive REPL
-
-```bash
-python scripts/chat.py
-```
-
-- Type free-text queries at runtime; the system will plan and execute agent workflows and print answers.
 
 ## Architecture Overview (high-level)
 
@@ -126,20 +71,6 @@ python scripts/chat.py
 - LLM calls may incur usage costs. The project includes rule-based fallbacks to allow offline testing and reduce calls.
 - Avoid committing your `.env` or API keys to source control. Add `.env` to `.gitignore`.
 
-## Contribution & Contact
-
-- Contributions welcome: open an issue or PR with a focused change. Keep changes small and testable.
-- If you want help adding a new feature (web UI, advanced memory filtering), say what you want and I can implement it.
-
----
-
-If you'd like, I can also:
-- Add a `.env.example` file with the required keys.
-- Add a `CONTRIBUTING.md` and a minimal test harness that runs `main.py` headless and asserts expected outputs.
-- Generate a short architecture diagram or sequence flow for the planning->execution->synthesis pipeline.
-
-Tell me which of those you'd like next and I'll add it. 
-
 ## Scripts & What They Do
 
 - **`python main.py`**: Run the predefined automated test scenarios.
@@ -149,15 +80,6 @@ Tell me which of those you'd like next and I'll add it.
 - **`python scripts/chat.py`**: Start an interactive console-based chat REPL.
   - What it does: boots the `CoordinatorAgent` and accepts runtime user questions. For each input it plans/executions a workflow and prints the system's response immediately.
   - Use when you want live conversation with the multi-agent system and immediate answers.
-
-- **`python scripts/check_groq_api_key.py`**: Validate Groq API credentials and ask a test question.
-  - What it does: loads `.env`, confirms `GROQ_API_KEY` exists, initializes the Groq client, sends a small chat request and prints the full model reply.
-  - Example:
-    ```bash
-    python scripts/check_groq_api_key.py --question "What is the capital of Pakistan?"
-    ```
-
-- **`scripts/*` helper behaviour**: The `scripts` entrypoint scripts add the project root to `sys.path` so local imports like `agents` and `utils` work when invoked from the project root—run scripts from the repository root for best results.
 
 Tips:
 - Inspect the `outputs/` directory after running `main.py` to view scenario logs and diagnose planning/execution failures.
