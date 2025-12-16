@@ -9,9 +9,9 @@ This README explains what the project does, how it works, how to run it, common 
 
 - Agent orchestration via a `CoordinatorAgent` that plans workflows and routes tasks to specialized agents.
 - Specialized worker agents:
-  - `ResearchAgent`: fetches or simulates information sources.
-  - `AnalysisAgent`: analyzes research outputs and produces structured analysis.
-  - `MemoryAgent` — handles persistent storage and retrieval (FAISS-backed vector store).
+  - `ResearchAgent` fetches or simulates information sources.
+  - `AnalysisAgent` analyzes research outputs and produces structured analysis.
+  - `MemoryAgent` handles persistent storage and retrieval (FAISS-backed vector store).
 - LLM-based planning and synthesis through a pluggable connector (`utils/llm_connector.py`) with graceful fallback to rule-based planning.
 - FAISS vector store integration for semantic memory (embedding generation via SentenceTransformers).
 - CLI scripts to run automated scenario tests and an interactive runtime REPL chat.
