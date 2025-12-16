@@ -11,6 +11,3 @@ groq
 faiss-cpu
 numpy
 sentence-transformers
-
-#frontend
-streamlit
