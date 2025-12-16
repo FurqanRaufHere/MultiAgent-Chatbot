@@ -1,0 +1,36 @@
+services:
+  # Define the service name (you can call it anything, this is descriptive)
+  krr_multi_agent:
+    # Build the image using the Dockerfile in the current directory (context: .)
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      
+    # Pass environment variables from the local .env file into the container
+    # This securely provides the GROQ_API_KEY to your LLMConnector
+    env_file:
+      - .env
+      
+    # Volumes: Connects your local folder to the container's folder
+    # This is CRUCIAL because:
+    # 1. Your code (main.py) is executed.
+    # 2. The 'outputs/' folder in the container saves the lgogs to your local machine.
+    # 3. The FAISS index (.bin, .pkl) and metadata (.json) persist on your local machine.
+    volumes:
+      - .:/app
+    
+    # Working directory inside the container
+    working_dir: /app
+
+
+    # Ensure Python logging is unbuffered so logs stream to docker stdout
+    environment:
+      - PYTHONUNBUFFERED=1
+
+    # Default command: run the batch scenario runner (main.py)
+    # To run an interactive frontend inside the container, override the command:
+    # `docker compose run --rm krr_multi_agent streamlit run Frontend/app.py --server.port 8501 --server.address 0.0.0.0`
+    command: ["python", "main.py"]
+
+    # Set the restart policy
+    restart: "no"
