@@ -12,6 +12,7 @@ __pycache__/
 chroma_db/
 *.faiss
 *.pkl
+faiss_index.bin
 
 # Project Logs and Outputs
 logs/
