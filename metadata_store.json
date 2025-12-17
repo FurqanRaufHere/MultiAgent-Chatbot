@@ -5,7 +5,7 @@
         "memory_type": "Knowledge",
         "agent_source": "Manager",
         "topic": "Research transformer architectures, analyze their computational efficiency, and summarize key trade-offs.",
-        "confidence": 0.3903501710287355,
+        "confidence": 0.6314164418769774,
         "source_refs": [
             "MockKB: Core Tech (mock://arch/attention)",
             "MockKB: Efficiency (mock://arch/tradeoffs)"
@@ -33,7 +33,7 @@
         "memory_type": "Knowledge",
         "agent_source": "Manager",
         "topic": "Compare two machine-learning approaches (CNN vs RNN) and recommend which is better for image classification.",
-        "confidence": 0.4759095351787845,
+        "confidence": 0.6479743078424236,
         "source_refs": [],
         "summary": "CNNs are generally better suited for image classification tasks than RNNs due to their ability to automatically learn spatial hierarchies of features and robustness to small transformations.",
         "is_used": false
@@ -44,12 +44,37 @@
         "memory_type": "Knowledge",
         "agent_source": "Manager",
         "topic": "What are Neural Networks",
-        "confidence": 0.95,
+        "confidence": 0.3988322498018939,
         "source_refs": [
             "MockKB: Basics (mock://types/fnn_rnn_cnn)",
             "MockKB: Deep Learning (mock://types/gan_autoencoder)"
         ],
         "summary": "Neural networks are machine learning models inspired by the human brain, composed of layers of interconnected nodes that process and transmit information to recognize patterns and make predictions.",
+        "is_used": false
+    },
+    "2025-12-16T14:58:37.482150": {
+        "id": "2025-12-16T14:58:37.482150",
+        "timestamp": "2025-12-16T14:58:37.482308",
+        "memory_type": "Knowledge",
+        "agent_source": "Manager",
+        "topic": "Research transformer architectures, analyze their computational efficiency, and summarize key trade-offs.",
+        "confidence": 0.95,
+        "source_refs": [
+            "MockKB: Core Tech (mock://arch/attention)",
+            "MockKB: Efficiency (mock://arch/tradeoffs)"
+        ],
+        "summary": "Transformer architectures offer high performance in NLP tasks but require careful consideration of computational efficiency and key trade-offs to balance performance, efficiency, and memory usage.",
+        "is_used": false
+    },
+    "2025-12-16T14:58:45.618029": {
+        "id": "2025-12-16T14:58:45.618029",
+        "timestamp": "2025-12-16T14:58:45.618037",
+        "memory_type": "Knowledge",
+        "agent_source": "Manager",
+        "topic": "Compare two machine-learning approaches (CNN vs RNN) and recommend which is better for image classification.",
+        "confidence": 0.9,
+        "source_refs": [],
+        "summary": "CNNs are generally better suited for image classification tasks due to their ability to extract local features and learn spatial hierarchies of features.",
         "is_used": false
     }
 }
