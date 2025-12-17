@@ -1,25 +1,25 @@
-20:43:43.321 | INFO     | __main__:run_scenario:72 - ===== SCENARIO START: Simple Query =====
-20:43:43.321 | INFO     | __main__:run_scenario:73 - USER INPUT: What are the main types of neural networks?
-20:43:43.321 | INFO     | agents.coordinator:process_query:119 - --- STARTING NEW QUERY ---
-20:43:43.321 | INFO     | agents.coordinator:process_query:120 - User Query Received: What are the main types of neural networks?
-20:43:43.321 | INFO     | agents.memory_agent:execute:21 - Executing memory action: retrieve
-20:43:43.568 | INFO     | memory.faiss_store:search_vector:93 - FAISS search returned 1 results.
-20:43:43.569 | INFO     | agents.coordinator:plan_workflow:60 - Generating workflow plan via LLM.
-20:43:44.103 | WARNING  | agents.coordinator:plan_workflow:70 - LLM did not return a valid JSON plan; attempting tolerant text parse.
-20:43:44.433 | INFO     | agents.coordinator:plan_workflow:85 - Parsed JSON plan from text response.
-20:43:44.433 | INFO     | agents.coordinator:process_query:156 - Step 0: Routing to ResearchAgent
-20:43:44.433 | INFO     | agents.research_agent:execute:55 - Simulating research for query: main types of neural networks
-20:43:44.433 | INFO     | agents.research_agent:execute:60 - Research successful. Retrieved 2 snippets.
-20:43:44.433 | INFO     | agents.coordinator:process_query:156 - Step 1: Routing to AnalysisAgent
-20:43:44.433 | INFO     | agents.analysis_agent:execute:21 - Preparing analysis task: Analyzing 2 data sources.
-20:43:44.840 | INFO     | agents.analysis_agent:execute:53 - Analysis complete with confidence: 1.0
-20:43:44.840 | INFO     | agents.coordinator:process_query:156 - Step 2: Routing to MemoryAgent
-20:43:44.840 | INFO     | agents.memory_agent:execute:21 - Executing memory action: None
-20:43:45.374 | WARNING  | agents.coordinator:_synthesize_and_extract_knowledge:269 - Could not extract confidence from synthesis.
-20:43:45.374 | INFO     | agents.coordinator:process_query:217 - --- QUERY COMPLETE ---
-20:43:45.374 | INFO     | __main__:run_scenario:79 - FINAL ANSWER GENERATED:
-20:43:45.374 | INFO     | __main__:run_scenario:80 - **Comprehensive Final Answer:**
-The main types of neural networks include Feedforward Neural Networks, Recurrent Neural Networks (RNNs), Convolutional Neural Networks (CNNs), Autoencoders, and Generative Adversarial Networks (GANs). Feedforward Neural Networks are the simplest type, where data flows only in one direction. RNNs are suitable for sequential data, such as time series or natural language processing. CNNs are ideal for image and video processing tasks, leveraging spatial hierarchies of features. Autoencoders are used for dimensionality reduction and generative modeling, while GANs consist of two neural networks that compete to generate new data samples.
+14:58:28.513 | INFO     | __main__:run_scenario:72 - ===== SCENARIO START: Simple Query =====
+14:58:28.513 | INFO     | __main__:run_scenario:73 - USER INPUT: What are the main types of neural networks?
+14:58:28.513 | INFO     | agents.coordinator:process_query:119 - --- STARTING NEW QUERY ---
+14:58:28.513 | INFO     | agents.coordinator:process_query:120 - User Query Received: What are the main types of neural networks?
+14:58:28.514 | INFO     | agents.memory_agent:execute:21 - Executing memory action: retrieve
+14:58:28.642 | INFO     | memory.faiss_store:search_vector:93 - FAISS search returned 1 results.
+14:58:28.642 | INFO     | agents.coordinator:plan_workflow:60 - Generating workflow plan via LLM.
+14:58:30.236 | WARNING  | agents.coordinator:plan_workflow:70 - LLM did not return a valid JSON plan; attempting tolerant text parse.
+14:58:30.856 | INFO     | agents.coordinator:plan_workflow:85 - Parsed JSON plan from text response.
+14:58:30.856 | INFO     | agents.coordinator:process_query:156 - Step 0: Routing to ResearchAgent
+14:58:30.856 | INFO     | agents.research_agent:execute:55 - Simulating research for query: main types of neural networks
+14:58:30.856 | INFO     | agents.research_agent:execute:60 - Research successful. Retrieved 2 snippets.
+14:58:30.856 | INFO     | agents.coordinator:process_query:156 - Step 1: Routing to AnalysisAgent
+14:58:30.856 | INFO     | agents.analysis_agent:execute:21 - Preparing analysis task: Analyzing 2 data sources.
+14:58:33.284 | INFO     | agents.analysis_agent:execute:53 - Analysis complete with confidence: 1.0
+14:58:33.284 | INFO     | agents.coordinator:process_query:156 - Step 2: Routing to MemoryAgent
+14:58:33.284 | INFO     | agents.memory_agent:execute:21 - Executing memory action: None
+14:58:33.716 | WARNING  | agents.coordinator:_synthesize_and_extract_knowledge:269 - Could not extract confidence from synthesis.
+14:58:33.716 | INFO     | agents.coordinator:process_query:217 - --- QUERY COMPLETE ---
+14:58:33.716 | INFO     | __main__:run_scenario:79 - FINAL ANSWER GENERATED:
+14:58:33.716 | INFO     | __main__:run_scenario:80 - **Final Answer:**
+The main types of neural networks include Feedforward Neural Networks, Recurrent Neural Networks (RNNs), Convolutional Neural Networks (CNNs), Autoencoders, and Generative Adversarial Networks (GANs). Each type of neural network has its unique architecture and is suited for specific tasks, such as image classification, natural language processing, and generative modeling.
 
 **
-20:43:45.374 | INFO     | __main__:run_scenario:81 - ===== SCENARIO END: Simple Query =====
+14:58:33.716 | INFO     | __main__:run_scenario:81 - ===== SCENARIO END: Simple Query =====
