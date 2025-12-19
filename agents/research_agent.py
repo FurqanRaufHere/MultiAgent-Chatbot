@@ -4,7 +4,7 @@ import os
 from typing import Dict, Any, List, Optional
 
 class ResearchAgent(BaseAgent):
-    """Simulates information retrieval using a pre-loaded knowledge base (mock search)."""
+    """Simulates information retrieval using a pre-loaded knowledge base (mock search)"""
     
     def __init__(self):
         super().__init__("ResearchAgent")
